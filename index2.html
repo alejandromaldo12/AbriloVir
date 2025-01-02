@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mensaje de Perdón</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #fdf5e6;
+        }
+        .message-box {
+            text-align: center;
+            padding: 20px;
+            border: 2px solid #ff6b6b;
+            border-radius: 15px;
+            background-color: #fff;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #ff6b6b;
+        }
+        p {
+            font-size: 1.2em;
+            color: #333;
+        }
+        .buttons {
+            margin-top: 20px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 1em;
+            color: #fff;
+            background-color: #ff6b6b;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            margin: 5px;
+        }
+        button:hover {
+            background-color: #e63946;
+        }
+        #yesButton {
+            transition: transform 0.3s ease, background-color 0.3s ease;
+        }
+        #noButton {
+            transition: transform 0.3s ease, opacity 0.3s ease;
+        }
+    </style>
+</head>
+<body>
+    <div class="message-box">
+        <h1>Lo siento mucho 💖</h1>
+        <p>Perdón por el mal trago que te hice pasar. No fue mi intención.  
+        Te amo más de lo que puedo expresar con palabras. ¿Me perdonas?</p>
+        <div class="buttons">
+            <button id="yesButton" onclick="showLove()">Sí, tonto ❤️</button>
+            <button id="noButton" onclick="shrinkButton()">No, sonso 😠</button>
+        </div>
+    </div>
+
+    <script>
+        function showLove() {
+            alert("¡Gracias, amor! Prometo esforzarme para hacerte siempre feliz. 🌹");
+        }
+
+        function shrinkButton() {
+            const noButton = document.getElementById('noButton');
+            const yesButton = document.getElementById('yesButton');
+
+            // Encoger el botón "No, sonso 😠"
+            noButton.style.transform = 'scale(0.5)';
+            noButton.style.opacity = '0';
+
+            // Hacer que el botón "Sí, tonto ❤️" se agrande
+            yesButton.style.transform = 'scale(1.5)';
+            
+            // Retirar el botón "No, sonso 😠" después de la animación
+            setTimeout(() => {
+                noButton.style.display = 'none';
+            }, 300);
+        }
+    </script>
+
+</body></html>
